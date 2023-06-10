@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Book from "./Book";
 
-export default function BookSearch(props){
+export default function BookSearch(){
 
    const location = useLocation();
    const {from} = location.state;
