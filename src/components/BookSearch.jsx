@@ -12,10 +12,16 @@ export default function BookSearch(){
     <>
     <div>
     <button onClick={() => navigate(-1)}>Back</button>
-    {searchResults.map(({key, title}) => 
-        <p>`${key}:{title}`</p>
-    )}
-    <Link to="/book"><h2>Book </h2></Link>
+    {searchResults.map(({key, title}, i) => 
+        <Link to="/book">
+            <p id={i}>{i+1}. {title}</p>
+        </Link>
+        // {/* // <Book id={i} key={key} title={title}/> */}
+    )} 
+    {/* <Link to="/book" state={{
+        }}>
+        <Book />
+    </Link> */}
     <h2>Book </h2>
     <h2>Book </h2>
     <h2>Book </h2>
