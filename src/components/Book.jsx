@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom"
 
 export default function Book(){
-    // const [book, setBook] = useState({});
+    const [book, setBook] = useState({});
     const navigate = useNavigate();
     const location = useLocation();
     const {key} = location.state;
@@ -21,7 +21,9 @@ export default function Book(){
     return (
     <>
     <button onClick={() => navigate(-1)}>Back</button>
-    Book description
+    <p>{book.title}</p>
+    
+    {/* <img src={`https://covers.openlibrary.org/b/id/${book.covers[0]}-M.jpg`}></img> */}
     </>
     )
 }

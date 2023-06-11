@@ -7,14 +7,13 @@ export default function Home(props){
 
     const inputRef = useRef();
     
-    // useEffect(() => {} ,[]);
+    // useEffect(() => {}, [])
     const handleSearch = async () => {
         const bookTitle = inputRef.current.value;
         const response = await fetch(`https://openlibrary.org/search.json?title=${bookTitle}`)
         const jsonData = await response.json();
         props.setSearchResults(jsonData.docs);
     }
-    
     
     return (
     <>
