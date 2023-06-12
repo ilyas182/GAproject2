@@ -22,7 +22,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Home searchResults={searchResults} setSearchResults={setSearchResults}/>}/>
           <Route path="book" element={<Book/>}/>
-          <Route path="booksearch" element={<BookSearch />}/>
+          <Route path="booksearch" element={<BookSearch searchResults={searchResults} />}/>
           <Route path="*" element={<NoMatch/>}/>
           <Route path="users" element={<User/>}>
             <Route path=":userId" element={<UserDetails/>}/>
