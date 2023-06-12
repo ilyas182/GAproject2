@@ -21,9 +21,6 @@ export default function BookSearch(props){
             <p id={i}>{i+1}. {title}</p>
         </Link>
     )} 
-    <h2>Book </h2>
-    <h2>Book </h2>
-    <h2>Book </h2>
     
 
     </div>
