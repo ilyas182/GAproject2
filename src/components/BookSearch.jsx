@@ -15,12 +15,12 @@ export default function BookSearch(props){
     <>
     <div>
     <button onClick={() => navigate(-1)}>Back</button>
-    {props.searchResults.map(({ key, title, author_name }, i) => 
+    {props.searchResults.map(({ key, title, author_name, author_key }, i) => 
     <div key={i}>
     <Link to="/book" state={{ key, title, author: author_name }}>
       <p id={i}>{i + 1}. {title}</p>
     </Link>
-    <p>Written by: </p> <Link to="/author" state={{}}>
+    <p>Written by: </p> <Link to="/author" state={{name: author_name, author_key: author_key}}>
       <p>{author_name}</p>
     </Link>
     <hr/>
