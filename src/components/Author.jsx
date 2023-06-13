@@ -34,8 +34,12 @@ export default function Author(){
         <p>{author.bio}</p>
 
         <h2>Works</h2>
-        {authorWorks.entries.map(({title}, i) =>
-        <p id={i}>{i+1}. {title}</p>        
+        {authorWorks.entries && authorWorks.entries.length > 0 ? (
+        authorWorks.entries.map(({ title }, i) => 
+        <p key={i}>{i+1}.{title}</p>        
+        )
+        ) : (
+            <p> No works available</p>
         )}
         </>
     )
