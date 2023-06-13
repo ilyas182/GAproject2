@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 export default function Author(){
     const [author, setAuthor] = useState({});
     const [authorWorks, setAuthorWorks] = useState({});
     const location = useLocation();
+    const navigate = useNavigate();
     const {name, author_key} = location.state;
     console.log("name", name);
     console.log("key", author_key)
@@ -28,6 +29,7 @@ export default function Author(){
     
     return (
         <>
+        <button onClick={() => navigate(-1)}>Back</button>
         {/* <p>{name}</p> */}
         <h2>{author.name}</h2>
         <p>Birth date: {author.birth_date}</p>
