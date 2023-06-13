@@ -20,7 +20,10 @@ export default function BookSearch(props){
     <Link to="/book" state={{ key, title, author: author_name }}>
       <p id={i}>{i + 1}. {title}</p>
     </Link>
-    <p>Written by: {author_name}</p>
+    <p>Written by: </p> <Link to="/author" state={{}}>
+      <p>{author_name}</p>
+    </Link>
+    <hr/>
     </div>
 )}
     

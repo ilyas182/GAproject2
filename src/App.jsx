@@ -8,6 +8,7 @@ import Home from './components/Home';
 import NoMatch from './components/NoMatch';
 import User from './components/User/Users';
 import UserDetails from './components/User/UserDetails';
+import Author from './components/Author';
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="users" element={<User/>}>
             <Route path=":userId" element={<UserDetails/>}/>
           </Route>
+          <Route path="author" element={<Author/>}/>
 
       </Routes>
     </div>
