@@ -5,8 +5,9 @@ export default function Book(){
     const [book, setBook] = useState({});
     const navigate = useNavigate();
     const location = useLocation();
-    const {key} = location.state;
-    console.log(key);
+    const {key, title, author} = location.state;
+    console.log('key', key);
+    console.log('key', author);
     
     useEffect(() => {
         async function fetchBook() {
@@ -21,7 +22,7 @@ export default function Book(){
     return (
     <>
     <button onClick={() => navigate(-1)}>Back</button>
-    <p>{book.title}</p>
+    <p>{book.title} by {author}</p>
     {/* {book.covers.length > 0 &&
     <img src={`https://covers.openlibrary.org/b/id/${book.covers[0]}-M.jpg`}></img>
     } */}
