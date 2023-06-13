@@ -17,23 +17,27 @@ export default function Book(){
         }
         fetchBook();
     }, []);
-    let x;
-    console.log(x)
-    console.log('book',book);
+    
     return (
     <>
     <button onClick={() => navigate(-1)}>Back</button>
     <p>{book.title}</p>
-    {/* {book.covers}
-    <img src={`https://covers.openlibrary.org/b/id/${book.covers[0]}-M.jpg`}></img> */}
+    {/* {book.covers.length > 0 &&
+    <img src={`https://covers.openlibrary.org/b/id/${book.covers[0]}-M.jpg`}></img>
+    } */}
 
     {book.covers && book.covers.length > 0 ? (
         <img
           src={`https://covers.openlibrary.org/b/id/${book.covers[0]}-M.jpg`}
           alt="Book Cover"
+          style={{ border: "1px solid black" }}
         />
       ) : (
-        <p>No cover available</p>
+        <img
+        src=""
+        alt="No Cover Available"
+        style={{ border: "1px solid black" }}
+  />
       )}
     
     </>
