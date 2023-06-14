@@ -12,12 +12,12 @@ export default function Author(){
 
     useEffect(() => {
         async function fetchAuthor() {
-          const response = await fetch(`https://openlibrary.org/authors/${author_key[0]}.json`);
+          const response = await fetch(`https://openlibrary.org/authors/${author_key}.json`);
           const jsonData = await response.json();
           console.log("book", jsonData)
           setAuthor(jsonData);
 
-          const response2 = await fetch(`https://openlibrary.org/authors/${author_key[0]}/works.json`);
+          const response2 = await fetch(`https://openlibrary.org/authors/${author_key}/works.json`);
           const jsonData2 = await response2.json();
           setAuthorWorks(jsonData2);
         }

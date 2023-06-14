@@ -24,11 +24,24 @@ export default function BookSearch(props){
     
     <p>Written by: </p> 
     
-    {author_name.map((name) => 
+    {/* <Link to="/author" state={{name: author_name, author_key: author_key}}>
+      {author_name.map}<p>{author_name}</p>
+    </Link> */}
+
+    {/* {props.searchResults.map(({author_name, author_key}) => 
         <Link to="/author" state={{name: author_name, author_key: author_key}}>
-        <p style={{ display: "inline-block", marginRight: "10px" }}>{name} |</p>
+        <p style={{ display: "inline-block", marginRight: "10px" }}>{author_name} |</p>
       </Link>
-    )}
+    )} */}
+     {author_name.map((name, i) => (
+    <Link 
+      key={i} 
+      to="/author" 
+      state={{ name: author_name, author_key: author_key[i] }}>
+        <p style={{ display: "inline-block", marginRight: "10px" }}>{name} |</p>
+    </Link>
+))}
+
     <hr/>
     </div>
 )}
