@@ -18,6 +18,7 @@ function App() {
   return (
     <>
     <div>
+      <title>Book search app</title>
       <h1>Book search app</h1>
       
       <Routes>

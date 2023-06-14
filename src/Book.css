@@ -1,0 +1,51 @@
+/* Book.css */
+.book-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .book-cover {
+    border: 1px solid black;
+    max-width: 200px;
+  }
+  
+  .book-title {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .book-author {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  
+  .book-synopsis-header {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .book-synopsis {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .back-button:hover {
+    background-color: #d4d4d4;
+  }
