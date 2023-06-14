@@ -7,7 +7,7 @@ export default function Author(){
     const location = useLocation();
     const navigate = useNavigate();
     const {name, author_key} = location.state;
-    console.log("name", name);
+    console.log("author name", name);
     console.log("key", author_key)
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export default function Author(){
         {/* <p>{name}</p> */}
         <h2>{author.name}</h2>
         
-        <p>{author.bio}</p>
+        <p>{author.bio?.value || author.bio}</p>
 
         <h2>Works</h2>
         {authorWorks.entries && authorWorks.entries.length > 0 ? (

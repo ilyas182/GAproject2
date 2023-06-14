@@ -35,9 +35,9 @@ export default function BookSearch(props){
     )} */}
      {author_name.map((name, i) => (
     <Link 
-      key={i} 
+      // key={i} 
       to="/author" 
-      state={{ name: author_name, author_key: author_key[i] }}>
+      state={{ name: author_name[i], author_key: author_key[i] }}>
         <p style={{ display: "inline-block", marginRight: "10px" }}>{name} |</p>
     </Link>
 ))}
