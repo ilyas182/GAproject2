@@ -22,10 +22,8 @@ export default function Book(){
     return (
     <>
     <button onClick={() => navigate(-1)}>Back</button>
-    <p>{book.title} by {author}</p>
-    {/* {book.covers.length > 0 &&
-    <img src={`https://covers.openlibrary.org/b/id/${book.covers[0]}-M.jpg`}></img>
-    } */}
+    <p>{book.title} <br/>by {author}</p>
+  
 
     {book.covers && book.covers.length > 0 ? (
         <img

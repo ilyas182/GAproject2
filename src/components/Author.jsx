@@ -32,7 +32,7 @@ export default function Author(){
         <button onClick={() => navigate(-1)}>Back</button>
         {/* <p>{name}</p> */}
         <h2>{author.name}</h2>
-        <p>Birth date: {author.birth_date}</p>
+        
         <p>{author.bio}</p>
 
         <h2>Works</h2>
