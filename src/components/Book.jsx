@@ -21,9 +21,33 @@ export default function Book(){
         fetchBook();
     }, []);
     
+    const favHandler = async () => {
+
+      const data = {
+        "records": [
+          {
+            "fields": {
+              "Book name": "book name test3",
+              "Author": "author test3"
+            }
+          }
+        ]
+      }
+      
+      const response = await fetch("https://api.airtable.com/v0/app65aqYxyrOsl98C/User", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Authorization": "Bearer keyPG1O02n16CwtIw",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+      await response.json();
+    }
     return (
       <div className="book-container">
         <button onClick={() => navigate(-1)}>Back</button>
+        <button onClick={favHandler}>Add book to favourites</button>
         <br />
     
         {book.covers && book.covers.length > 0 ? (
