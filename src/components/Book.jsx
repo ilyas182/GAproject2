@@ -9,7 +9,7 @@ export default function Book(){
     const {key, title, author} = location.state;
     console.log('key', key);
     console.log('author', author);
-   
+  
     
     useEffect(() => {
         async function fetchBook() {
@@ -20,15 +20,17 @@ export default function Book(){
         }
         fetchBook();
     }, []);
+    console.log('book.title',book.title)
     
     const favHandler = async () => {
-
       const data = {
         "records": [
           {
             "fields": {
-              "Book name": "book name test3",
-              "Author": "author test3"
+              "title": `${title}`,
+              "author": `${author}`,
+              "website": `https://openlibrary.org${key}.json`
+              
             }
           }
         ]
@@ -43,6 +45,7 @@ export default function Book(){
       body: JSON.stringify(data),
     });
       await response.json();
+      alert("Book added");
     }
     return (
       <div className="book-container">

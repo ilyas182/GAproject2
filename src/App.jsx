@@ -18,8 +18,12 @@ function App() {
   return (
     <>
     <div>
-      <title>Book search app</title>
+      <Nav>
       <h1>Book search app</h1>
+      <Navlink to="/"/>
+      <Navlink to="/"/>
+      </Nav>
+      
       
       <Routes>
           <Route path="/" element={<Home searchResults={searchResults} setSearchResults={setSearchResults}/>}/>
