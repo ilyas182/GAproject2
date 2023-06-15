@@ -1,0 +1,15 @@
+.navbar {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .nav-link {
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+  }
+  

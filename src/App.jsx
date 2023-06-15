@@ -9,6 +9,8 @@ import NoMatch from './components/NoMatch';
 import User from './components/User/Users';
 import UserDetails from './components/User/UserDetails';
 import Author from './components/Author';
+import Favourite from './components/Favourite';
+import Navbar from './components/Navbar';
 
 
 
@@ -18,11 +20,7 @@ function App() {
   return (
     <>
     <div>
-      <Nav>
-      <h1>Book search app</h1>
-      <Navlink to="/"/>
-      <Navlink to="/"/>
-      </Nav>
+      <Navbar/>
       
       
       <Routes>
@@ -34,7 +32,7 @@ function App() {
             <Route path=":userId" element={<UserDetails/>}/>
           </Route>
           <Route path="author" element={<Author/>}/>
-
+          <Route path="fav" element={<Favourite/>}/>
       </Routes>
     </div>
     </>
