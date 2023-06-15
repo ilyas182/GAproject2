@@ -2,7 +2,7 @@
 .book-search-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
     margin-top: 20px;
   }
   
@@ -24,10 +24,18 @@
   .author-link {
     text-decoration: none;
     color: #007bff;
-    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 5px;
   }
   
   .author-link:hover {
     text-decoration: underline;
   }
-  
+  .author-names {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .author-link:last-child {
+    margin-right: 0;
+  }
