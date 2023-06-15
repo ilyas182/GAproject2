@@ -9,8 +9,7 @@ export default function Book(){
     const {key, title, author} = location.state;
     console.log('key', key);
     console.log('author', author);
-    const authorNames = author.join(", ");
-    console.log(authorNames);
+   
     
     useEffect(() => {
         async function fetchBook() {
@@ -40,11 +39,16 @@ export default function Book(){
             className="book-cover"
           />
         )}
-    
+
         <h2 className="book-title">{book.title}</h2>
-        <p className="book-author">by: {authorNames}</p>
+        {author ? (
+          <p className="book-author">by: {author.join(", ")}</p>
+        ):(
+          <p>No author found</p>
+        )}
+        
+
         <h3 className="book-synopsis-header">Synopsis:</h3>
-    
         {book.description && book.description.value ? (
           <p className="book-synopsis">{book.description.value}</p>
         ) : (
