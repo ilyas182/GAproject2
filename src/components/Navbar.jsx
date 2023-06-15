@@ -3,9 +3,12 @@ import '../Navbar.css';
 
 function Navbar() {
   return (
+   
     <nav className="navbar">
-      <NavLink exact to="/" className="nav-link" activeClassName="active">Home</NavLink>
+         <h2 style={{color: 'black'}}>Book search app</h2>
+      <NavLink to="/" className="nav-link" activeClassName="active">Home</NavLink>
       <NavLink to="/fav" className="nav-link" activeClassName="active">Favourites</NavLink>
+      
     </nav>
   );
 }

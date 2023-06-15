@@ -29,7 +29,8 @@ export default function Book(){
             "fields": {
               "title": `${title}`,
               "author": `${author}`,
-              "website": `https://openlibrary.org${key}.json`
+              "website": `https://openlibrary.org${key}.json`,
+              "key": `${book.covers[0]}`
               
             }
           }
