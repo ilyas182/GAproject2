@@ -24,12 +24,10 @@ The project structure is organized as follows:
 - components: Contains React components used in the app
 - assets: Contains static assets such as images
 - App.jsx: The main component that renders the app containing all <Route>
+- NoMatch.jsx: Handles no match route in URL
 - Home.jsx: Handles the search input by the user
 - BookSearch.jsx: Fetch API & displays search results keyed in by user in the Home.jsx component
 - Book.jsx: Fetch API of particular book & display book details when user clicks in BookSearch.jsx component. 
 Contains 'Add to favourites' button which will do a 'POST' of the book details to Airtable.
 - Author.jsx: Fetch API & displays details of author.
 - Favourites.jsx: Fetch 'GET' favourites book(s) that was 'POST'
-
-
-
