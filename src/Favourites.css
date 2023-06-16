@@ -1,0 +1,33 @@
+/* Favourite.css */
+
+.favourites-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .favourites-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .favourites-item p {
+    margin-bottom: 10px;
+  }
+  
+  .favourites-item img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .favourites-item hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }

@@ -32,11 +32,3 @@ components: Contains React components used in the app
 assets: Contains static assets such as images
 App.js: The main component that renders the app
 index.js: The entry point of the app
-Contributing
-Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
-
-Fork the repository
-Create a new branch: git checkout -b my-new-branch
-Make your changes and commit them: git commit -am 'Add some feature'
-Push the branch: git push origin my-new-branch
-Create a pull request
