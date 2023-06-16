@@ -15,7 +15,10 @@ export default function BookSearch(props){
     return (
       <div className="book-search-container">
       <button onClick={() => navigate(-1)}>Back</button>
-      {props.searchResults.map(({ key, title, author_name, author_key }, i) => (
+      
+      {props.searchResults > 0 ? (
+
+      props.searchResults.map(({ key, title, author_name, author_key }, i) => (
         <div key={i} className="book-search-item">
           <Link to="/book" state={{ key, title, author: author_name }}>
             <p id={i}>{i + 1}. {title}</p>
@@ -40,7 +43,10 @@ export default function BookSearch(props){
   </div>
           <hr />
         </div>
-      ))}
+      ))
+      ) : (
+        <p>No results found</p>
+      )}
     </div>
   );
 }
